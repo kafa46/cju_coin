@@ -22,4 +22,12 @@
 |08|04-02. Blockchain transfer 클래스 코딩|[click](https://youtu.be/kr5OT1lDokg)|[바로가기](./lec_04_transfer_class/lecture_slides/꼰대강의_블록체인_04_거래%20기능%20구현%20및%20작동.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_04_transfer_class)|
 |09|04-03. Blockchain 콘트롤러 main_views.py 코딩|[click](https://youtu.be/tkXE9sNU1w0)|[바로가기](./lec_04_transfer_class/lecture_slides/꼰대강의_블록체인_04_거래%20기능%20구현%20및%20작동.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_04_transfer_class)|
 |10|04-04. UI (index.html) 및 jQuery/Ajax (transfer.js) 코딩 |[click](https://youtu.be/CnDID0WAyks)|[바로가기](./lec_04_transfer_class/lecture_slides/꼰대강의_블록체인_04_거래%20기능%20구현%20및%20작동.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_04_transfer_class)|
+|11|05-01. Wallet 서버 UI 설명(이론) |[click](https://youtu.be/lDkILeP9D_I)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+|12|05-02. Wallet 서버 뼈대 만들기 |[click](https://youtu.be/mdKK-ZfQaoU)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+|13|05-03. login_manager 구현 및 서버 forms.py 작성 |[click](https://youtu.be/1yl-Y-QnFmY)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+|14|05-04. Wallet 서버 회원가입   템플릿 상속 및 UI 코딩|[click](https://youtu.be/b6xsgRC066o)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+|15|05-05. 회원가입 controller auth_views.py 코딩|[click](https://youtu.be/ie9MrruSBuc)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+
+
+
 
