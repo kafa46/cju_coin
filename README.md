@@ -27,7 +27,8 @@
 |13|05-03. login_manager 구현 및 서버 forms.py 작성 |[click](https://youtu.be/1yl-Y-QnFmY)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |14|05-04. Wallet 서버 회원가입   템플릿 상속 및 UI 코딩|[click](https://youtu.be/b6xsgRC066o)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |15|05-05. 회원가입 controller auth_views.py 코딩|[click](https://youtu.be/ie9MrruSBuc)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
+|16|05-06. 로그인 페이지 login.html 코딩|[click](https://youtu.be/SXpTg-ezCUM)|[바로가기](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 
 
 
-
+https://youtu.be/kvF7sBJwtow

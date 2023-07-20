@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script type="text/javascript">
+        alert("{{ messages[-1] }}")
+    </script>
+    {% endif %}
+    {% endwith %}
+
+    {% if g.user %}
+    <div class="row my-3">
+        <div class="col">
+            <span class="pl-5">{{ g.user.user_id }}</span> 님의 전자지갑입니다.
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-sm">
+            <button class="btn btn-sm btn-outline-primary" id="renew">새로고침</button>
+            <table class="table dark">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>환산가치</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>씨쥬코인</td>
+                        <td>원화(KWN)</td>
+                        <td>달러(USD)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="my_wallet_current_amount">10</td>
+                        <td>공사중</td>
+                        <td>공사중</td>
+                    </tr>
+                    <tr>
+                        <td>지갑주소</td>
+                        <td colspan="2" id="my_blockchain_addr">{{ g.user.blockchain_addr }}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% else %}
+        시스템을 이용하기 위해서는 로그인이 필요합니다.
+    {% endif %}
+
+
+{% endblock %}

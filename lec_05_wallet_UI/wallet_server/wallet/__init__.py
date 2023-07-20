@@ -29,10 +29,14 @@ def create_app():
     from wallet.views import(
         main_views,
         auth_views,
+        wallet_views,
+        transfer_views,
     )
     
     app.register_blueprint(main_views.bp)
     app.register_blueprint(auth_views.bp)
+    app.register_blueprint(wallet_views.bp)
+    app.register_blueprint(transfer_views.bp)
     
     return app
     
