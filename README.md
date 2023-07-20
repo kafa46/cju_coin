@@ -12,9 +12,9 @@
 
 |순번|내용|동영상|슬라이드|소스코드|
 |:---:|---|:---:|:---:|:---:|
-|01|오리엔테이션|[click](https://youtu.be/Nqmxvvz9GHk)|[확인](./lec_01_orientation/꼰대강의_블록체인_01_Orientation.pdf)|없음|
-|02|이론 1. 블록체인 역사, 개념/논문 소개|[click](https://youtu.be/0mS6tG1c14g)|[확인](./lec_02_theory/꼰대강의_블록체인_02_Theroy.pdf)|없음|
-|03|이론 2. 핵심기술, 해시, 머클 트리|[click](https://youtu.be/tHRF8cRE05w)|[확인](./lec_02_theory/꼰대강의_블록체인_02_Theroy.pdf)|없음
+|01|00. 오리엔테이션|[click](https://youtu.be/Nqmxvvz9GHk)|[확인](./lec_01_orientation/꼰대강의_블록체인_01_Orientation.pdf)|없음|
+|02|01. (이론) 블록체인 역사, 개념/논문 소개|[click](https://youtu.be/0mS6tG1c14g)|[확인](./lec_02_theory/꼰대강의_블록체인_02_Theroy.pdf)|없음|
+|03|02. (이론) 핵심기술, 해시, 머클 트리|[click](https://youtu.be/tHRF8cRE05w)|[확인](./lec_02_theory/꼰대강의_블록체인_02_Theroy.pdf)|없음
 |04|03-01. 개발환경 세팅|[click](https://youtu.be/Ucao3tWKgTQ)|[확인](./lec_03_blockchain_class/lecture_slides/꼰대강의_블록체인_03_01_개발환경%20세팅.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_03_blockchain_class)|
 |05|03-02. 플라스크 설정 및 데이터베이스 설정|[click](https://youtu.be/QzWtqFLG9lM)|[확인](./lec_03_blockchain_class/lecture_slides/꼰대강의_블록체인_03_02_플라스크%20설정%20및%20데이터베이스%20생성.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_03_blockchain_class)|
 |06|03-03. Blockchain 클래스 구현 및 작동|[click](https://youtu.be/EhmPnL3e5lI)|[확인](./lec_03_blockchain_class/lecture_slides/꼰대강의_블록체인_03_03_blockchain%20구현%20및%20작동.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_03_blockchain_class)|
@@ -29,6 +29,6 @@
 |15|05-05. 회원가입 controller auth_views.py 코딩|[click](https://youtu.be/ie9MrruSBuc)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |16|05-06. 로그인 페이지 login.html 코딩|[click](https://youtu.be/SXpTg-ezCUM)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |17|05-07. 코인 이체 페이지 User Interface 구축|[click](https://youtu.be/kvF7sBJwtow)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
-|18|05-08. UI 구축을 마무리하며<br>(프런트(UI) 코딩에 힘들어하는 분들을 위하여)|[click]()|없음|없음|
+|18|05-08. UI 구축을 마무리하며<br>(프런트(UI) 코딩에 힘들어하는 분들을 위하여)|[click](https://youtu.be/z8Gl-SUggks)|없음|없음|
 
 
