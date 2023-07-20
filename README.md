@@ -29,6 +29,6 @@
 |15|05-05. 회원가입 controller auth_views.py 코딩|[click](https://youtu.be/ie9MrruSBuc)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |16|05-06. 로그인 페이지 login.html 코딩|[click](https://youtu.be/SXpTg-ezCUM)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
 |17|05-07. 코인 이체 페이지 User Interface 구축|[click](https://youtu.be/kvF7sBJwtow)|[확인](./lec_05_wallet_UI/lecture_slides/꼰대강의_블록체인_05_지갑(wallet)%20구축.pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_05_wallet_UI)|
-|18|05-08. UI 구축을 마무리하며 (프런트 코딩에 힘들어하는 분들을 위하여)|[click]()|없음|없음|
+|18|05-08. UI 구축을 마무리하며<br>(프런트(UI) 코딩에 힘들어하는 분들을 위하여)|[click]()|없음|없음|
 
 
