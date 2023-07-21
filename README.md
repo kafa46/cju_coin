@@ -32,7 +32,7 @@
 |18|05-08. UI 구축을 마무리하며<br>(프런트(UI) 코딩에 힘들어하는 분들을 위하여)|[click](https://youtu.be/z8Gl-SUggks)|없음|없음|
 |19|06-01. (핵심기술 - 이론) 블록체인 거래 검증의 필요성|[click](https://youtu.be/EILs0-vYjFQ)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
 |20|06-02. (핵심기술 - 이론) 블록체인 비밀키, 공개키 생성 기술|[click](https://youtu.be/tyTknNXUQ6I)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
-|21|06-03. (핵심기술 - 이론) 블록체인 지갑주소(wallet address) 생성 기술|[click](https://youtu.be/9XqfzJTlJ-o)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
+|21|06-03. (핵심기술 - 이론) 블록체인 wallet address 생성 기술|[click](https://youtu.be/9XqfzJTlJ-o)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
 |22|06-04. (핵심기술 - 이론) 블록체인 Signature 생성 및 검증 기술|[click](https://youtu.be/2TXIvYoQeR0)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
 
 
