@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script type="text/javascript">
+        alert("{{ messages[-1] }}")
+    </script>
+    {% endif %}
+    {% endwith %}
+
+
+    <form method="post">
+        {{ form.csrf_token  }}
+        <div class="mb-3">
+            <label for="user_id" class="form-label">아이디</label>
+            <input type="text" class="form-control"
+                id="user_id" name="user_id"
+                value="{{ form.user_id.data or '' }}"
+                autoComplete="off"
+                placeholder="최소 4글자 이상">
+        </div>        
+        <div class="mb-3">
+            <label for="passwd" class="form-label">비밀번호</label>
+            <input type="password" class="form-control" id="passwd" name="passwd"
+                autoComplete="off"
+                value="{{ form.passwd.data or '' }}"
+                autoComplete="off"
+                placeholder="대소문자, 특수기호, 숫자 포함해야 하며, 7글자 이상">
+        </div>
+        <button type="submit" class="btn btn-outline-primary">제출하기</button>
+        <a href="#" class="btn btn-outline-primary">취소</a>
+    </form>
+{% endblock %}
