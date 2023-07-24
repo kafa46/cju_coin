@@ -34,6 +34,11 @@
 |20|06-02. (핵심기술 - 이론) 블록체인 비밀키, 공개키 생성 기술|[click](https://youtu.be/tyTknNXUQ6I)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
 |21|06-03. (핵심기술 - 이론) 블록체인 wallet address 생성 기술|[click](https://youtu.be/9XqfzJTlJ-o)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
 |22|06-04. (핵심기술 - 이론) 블록체인 Signature 생성 및 검증 기술|[click](https://youtu.be/2TXIvYoQeR0)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-01_(핵심기술%20이론)%20블록체인%20코인%20이체(transaction).pdf)|없음|
+|23|06-05. (실습) 디렉토리 재구조화 (Restructuring)|[click](https://youtu.be/JptQFgY-7kc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|24|06-06. (실습) Private key, public key, blockchain address<br>생성하는 기능 코딩(실습)|[click](https://youtu.be/oy7v0LuPe_8)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|25|06-07. (실습) Wallet 클래스에서 signature 생성기능 구현|[click](https://youtu.be/3muK1AkZGrQ)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|26|06-08. (실습) Blockchain 서버에 transaction 검증기능 구현|[click](https://youtu.be/vMrZhu9e1Sg)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|27|06-09. (실습) Wallet 서버에서 transaction 전송하기 위한<br>front 기능(transfer.html, transfer.js) 구현|[click](https://youtu.be/sJffmxfRNCc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 
 
 
