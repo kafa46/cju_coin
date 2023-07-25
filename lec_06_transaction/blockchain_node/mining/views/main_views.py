@@ -42,15 +42,18 @@ def transactions():
         print('블록체인 노드: transaction 추가')
         request_json = request.json
         transfer =  Transfer(
+            send_public_key = request_json.get('send_public_key'),
             send_blockchain_addr = request_json.get('send_blockchain_addr'),
             recv_blockchain_addr = request_json.get('recv_blockchain_addr'),
-            amount = request_json.get('amount')
+            amount = float(request_json.get('amount')),
+            signature = request_json.get('signature')
         )
         is_transacted = transfer.add_transaction()
         
         if not is_transacted:
-            return jsonify({'status': 'fail'})
-        return jsonify({'status': 'success'})
+            return jsonify({'status': 'fail'}), 400
+        
+        return jsonify({'status': 'success'}), 201
     
         
         

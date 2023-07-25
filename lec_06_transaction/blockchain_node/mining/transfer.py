@@ -1,5 +1,5 @@
 import hashlib
-
+from pprint import pprint
 from ecdsa import NIST256p, VerifyingKey
 
 from mining import db
@@ -21,7 +21,7 @@ class Transfer:
         self.send_public_key = send_public_key
         self.send_blockchain_addr = send_blockchain_addr
         self.recv_blockchain_addr = recv_blockchain_addr
-        self.amount = amount
+        self.amount = float(amount)
         self.block_id = Block.query.filter(
             Block.timestamp).order_by(Block.timestamp.desc()).first().id
         self.signature = signature
@@ -46,10 +46,10 @@ class Transfer:
             {
                 'send_blockchain_addr': self.send_blockchain_addr,
                 'recv_blockchain_addr': self.recv_blockchain_addr,
-                'amount': float(self.amount)
+                'amount': float(self.amount),
             }
         )
-        
+ 
         # Todo
         #   마이닝(채굴)하는 사람은 검증 없이 transaction pool에 추가
         
@@ -58,10 +58,12 @@ class Transfer:
             self.signature,
             transaction
         )
+        
         if is_verified:
             self.commit_transaction()
-            return True
-        return False
+            # return True
+        
+        return is_verified
 
     
     def verify_transaction_signature(
@@ -73,18 +75,26 @@ class Transfer:
         '''거래(transaction) 서명(signature) 검증 후 True/False 리턴'''
         # 검증 과정 수행
         sha256 = hashlib.sha256()
+        print('transaction')
+        pprint(transaction)
         sha256.update(str(transaction).encode('utf-8'))
-        mssage = sha256.digest()
+        message = sha256.digest()
+        print(f'message: {message}')
         signature_byte = bytes().fromhex(signature)
         verifying_key = VerifyingKey.from_string(
-            bytes().fromhex(send_public_key),
-            curve=NIST256p
+            bytes().fromhex(send_public_key), curve=NIST256p
         )
-        is_verified = verifying_key.verify(
-            signature=signature_byte,
-            data=transaction
-        )
-        return is_verified # True if the verification was successful
+        try:
+            is_verified = verifying_key.verify(
+                signature=signature_byte,
+                # data=transaction,
+                data=message,
+            )
+            return is_verified # True if the verification was successful
+        except Exception as e:
+            print(f'Error in verify_transaction_signature.verify -> {e}')
+            return False
+            
             
             
             

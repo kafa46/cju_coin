@@ -22,10 +22,18 @@ $(function(){
                             alert(`이체하려는 금액이 잔액보다 커서 보낼수 없습니다.\n이체 수량을 확인해 주세요`)
                         }
                     }
+                    if (response.status == 'fail'){
+                        if (response.reason){
+                            alert(`${response.reason}`)
+                        }
+                    }
+
 
                 },
-                error: function(error){
-                    alert('이체에 실패 했습니다. ㅠㅠ', error)
+                error: function(request, status, error){
+                    alert('이체에 실패 했습니다. ㅠㅠ')
+                    console.log(status)
+                    console.log(error)
                 }
             })
         }

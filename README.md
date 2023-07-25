@@ -39,6 +39,8 @@
 |25|06-07. (실습) Wallet 클래스에서 signature 생성기능 구현|[click](https://youtu.be/3muK1AkZGrQ)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |26|06-08. (실습) Blockchain 서버에 transaction 검증기능 구현|[click](https://youtu.be/vMrZhu9e1Sg)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |27|06-09. (실습) Wallet 서버에서 transaction 전송하기 위한<br>front 기능(transfer.html, transfer.js) 구현|[click](https://youtu.be/sJffmxfRNCc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|28|06-10. (실습) Wallet 서버에서 transaction 전송하기 위한<br>콘트롤러(main_views.py) 코딩|[click](https://youtu.be/ZElUy9queNE)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|29|06-11. (실습) Wallet 서버와 Blockchain 서버를 연동하여<br>Transaction 전송하고 Blockchain 서버는 이를 검증한 후 저장|[click](https://youtu.be/2rdbxg3B8kk)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 
 
 

@@ -97,7 +97,7 @@
                             id="send_addr"
                             name="send_addr"
                             autocomplete="off"
-                            value="{{ g.user.public_key }}">
+                            value="{{ g.user.blockchain_addr }}">
                     </div>
                     <button class="btn btn-outline-primary" id="submit-btn">이체</button>
                     <a href="{{ url_for('main.home') }}" class="btn btn-outline-primary">취소</a>

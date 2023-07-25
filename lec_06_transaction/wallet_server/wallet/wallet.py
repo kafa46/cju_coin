@@ -3,6 +3,7 @@
 import hashlib
 import codecs
 import base58
+from pprint import pprint
 
 from ecdsa import NIST256p, SigningKey
 
@@ -44,36 +45,37 @@ class Wallet:
         ripemd160_bpk = hashlib.new('ripemd160')
         ripemd160_bpk.update(sha256_bpk_digest)
         ripemd160_bpk_digest = ripemd160_bpk.digest()
-        ripemd160_bpk_digest_hex = codecs.encode(ripemd160_bpk_digest,'hex')
+        ripemd160_bpk_digest_hex = codecs.encode(ripemd160_bpk_digest, 'hex')
         # Step 4. Network byte 추가
         network_coin_public_key = b'00' + ripemd160_bpk_digest_hex
         network_coin_public_key_bytes = codecs.decode(
-            network_coin_public_key,
+            network_coin_public_key, 
             'hex'
         )
         # Step 5. SHA-256 2회 수행
         sha256_bpk_digest = hashlib.sha256(network_coin_public_key_bytes).digest()
-        sha256_2_bpk_digest = hashlib.sha256(sha256_bpk_digest).digest() 
+        sha256_2_bpk_digest = hashlib.sha256(sha256_bpk_digest).digest()
         sha256_hex = codecs.encode(sha256_2_bpk_digest, 'hex')
         # Step 6. Checksum 구하기
         checksum = sha256_hex[:8]
+        
         # Step 7. Public Key에 Checksum 더하기
-        addr_hex = (sha256_hex + checksum).decode('utf-8')
+        # addr_hex = (sha256_hex + checksum).decode('utf-8')
+        addr_hex = (network_coin_public_key + checksum).decode('utf-8')
+        
         # Step 8. 더한 키를 Base58로 인코딩
         blockchain_addr = base58.b58encode(addr_hex).decode('utf-8')
         
         return blockchain_addr
     
-    
+    @staticmethod
     def generate_signature(
-        self,
         send_blockchain_addr: str,
         recv_blockchain_addr: str,
         send_private_key: str,
         amount: float
     ) -> str:
         '''거래에 필요한 signature 생성'''
-        sha256 = hashlib.sha256()
         transaction = dict_utils.sorted_dict_by_key(
             {
                 'send_blockchain_addr': send_blockchain_addr,
@@ -81,8 +83,12 @@ class Wallet:
                 'amount': float(amount),
             }
         )
+        sha256 = hashlib.sha256()
+        print('transaction')
+        pprint(transaction)        
         sha256.update(str(transaction).encode('utf-8'))
         message = sha256.digest()
+        print(f'message: {message}')
         private_key = SigningKey.from_string(
             bytes().fromhex(send_private_key),
             curve=NIST256p

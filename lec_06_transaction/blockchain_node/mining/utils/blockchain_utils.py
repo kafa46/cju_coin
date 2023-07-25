@@ -6,10 +6,10 @@ from mining.blockchain import BlockChain
 from mining.models import Block, Transaction
 
 def sorted_dict_by_key(unsorted_dic: dict):
-    return collections.OrderedDict(
-        sorted(unsorted_dic.items()), key=lambda keys: keys[0]
-    )
-    
+    # return collections.OrderedDict(
+    #     sorted(unsorted_dic.items()), key=lambda keys: keys[0]
+    # )
+    return sorted(unsorted_dic.items())
     
 def get_blockchain():
     '''데이터베이스로부터 블록체인 정보 가져오기'''
