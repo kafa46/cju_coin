@@ -4,7 +4,10 @@ from flask import (
     request,
     render_template,
 )
-from mining.utils.blockchain_utils import get_blockchain
+from mining.utils.blockchain_utils import (
+    get_blockchain,
+    calculate_total_amount,
+)
 from mining.transfer import Transfer
 
 bp = Blueprint('main', __name__, url_prefix='/')
@@ -55,7 +58,21 @@ def transactions():
         
         return jsonify({'status': 'success'}), 201
     
-        
+
+@bp.route('/coin_amount/', methods=['GET', 'POST'])
+def coin_amount():
+    '''코인 갯수를 계산하여 json 리턴'''
+    json_data = request.json
+    blockchain_addr = json_data['blockchain_addr']
+    if not blockchain_addr:
+        return jsonify({
+            'status': 'fail',
+            'content': '지갑주소(blockchain address)가 없습니다.'
+        }), 400
+    return jsonify({
+        'status': 'succcess',
+        'content': calculate_total_amount(blockchain_addr)
+    }), 201
         
         
         

@@ -74,3 +74,19 @@ def get_transaction_list(block: Block) -> list:
 def hash(block: dict) -> str:
     sorted_block = json.dumps(block, sort_keys=True)
     return hashlib.sha256(sorted_block.encode()).hexdigest()
+
+
+def calculate_total_amount(blockchain_addr: str) -> float:
+    '''blockchain_addr에 해당하는 계좌 총액(float) 구하기'''
+    total_amount = 0.0
+    chain = get_blockchain()
+    for block in chain['chain']:
+        # 체인으로 연결된 모든 블록 조사
+        for transaction in block['transactions']:
+            value = float(transaction['amount'])
+            if blockchain_addr == transaction['recv_blockchain_addr']:
+                total_amount += value
+            if blockchain_addr == transaction['send_blockchain_addr']:
+                total_amount -= value
+    
+    return total_amount

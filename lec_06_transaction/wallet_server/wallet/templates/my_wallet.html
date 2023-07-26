@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+    <script src="/static/js/reload_my_wallet.js"></script>
+
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <script type="text/javascript">
@@ -33,7 +36,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="my_wallet_current_amount">10</td>
+                        <td id="my_wallet_current_amount"></td>
                         <td>공사중</td>
                         <td>공사중</td>
                     </tr>

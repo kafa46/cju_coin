@@ -98,3 +98,31 @@ def transfer():
         'transfer.html',
         form=form,
     )
+
+
+@bp.route('/get_coin_amount/', methods=['GET'])
+def get_coin_amount():
+    blockchain_addr = request.args.get('blockchain_addr')
+    print(f'blockchain_addr in get_coin_amount: {blockchain_addr}')
+    
+    if not blockchain_addr:
+        return jsonify({'status': 'fail'}), 400
+    
+    # Seed Node에게 우선 요청
+    seed_node_url = f'http://{SEED_NODE_IP}:{PORT_MINING}/coin_amount'
+    json_data = {'blockchain_addr': blockchain_addr}
+    response = requests.post(
+        url=seed_node_url,
+        json=json_data,
+    )
+    data = response.json()
+    if response.status_code == 201:
+        return jsonify({
+            'status': 'success',
+            'amount': data['content']
+        }), 200
+    else:
+        return jsonify({
+            'status': 'fail',
+            'content': '블록체인 노드와 연결에 실패했습니다.'
+        }), 400
