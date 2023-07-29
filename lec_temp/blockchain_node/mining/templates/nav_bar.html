@@ -1,0 +1,27 @@
+<!-- 네비게이션바 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottomd-flex ">
+  <div class="container-fluid nav-pills d-flex justify-content-center text-center ">
+
+    <!-- 햄버거 메뉴 -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span>
+        메뉴 열기<span class="navbar-toggler-icon"></span>
+      </span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse nav justify-content-center"
+      id="navbarSupportedContent">
+      <a class="navbar-brand" href="{{ url_for('main.home') }}">씨쥬 코인 채굴 (CJU-coin Mining)</a>
+      <ul class="nav nav-pills">
+      </ul>
+    </div>
+  </div>
+</nav>

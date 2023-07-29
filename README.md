@@ -44,6 +44,12 @@
 |30|06-12. (실습) Blockchain 서버에 코인수량 확인 기능 만들기|[click](https://youtu.be/18409GAZUJ4)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |31|06-13. (실습) Wallet 서버에 코인 업데이트 기능 구현|[click](https://youtu.be/D6Ypmo5DPmc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |32|06-14. (실습) Wallet 서버에 코인 수량 자동 업데이트 적용|[click](https://youtu.be/-0dbA41e-sc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
+|33|07-01. (이론) 블록체인 채굴(mining) 필요성 및 관련 핵심기술|[click](https://youtu.be/9xxTaiP3OC8)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|34|07-02. (실습) 채굴 실습 브리핑, 디렉토리 생성, 일부 유틸리티 수정|[click](https://youtu.be/au8x9bpQ0Ps)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|35|07-03. (실습) 채굴 백엔드 구현 (mining, utils, transfer)|[click](https://youtu.be/iETzYmMfzT4)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|36|07-04. (실습) main_views 구현, 채굴 실행, 채굴 난이도 조정 실습|[click](https://youtu.be/4VRYrj7lcdM)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|37|07-05. (실습) 채굴자 화면 구성 1_기본단추, 입력 만들기|[click](https://youtu.be/eOPy2fDJBgQ)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|37|07-06. (실습) 채굴자 화면 구성 2_안내 텍스트 및 특수효과 추가|[click](https://youtu.be/AcrpGormM2k)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 
 
 

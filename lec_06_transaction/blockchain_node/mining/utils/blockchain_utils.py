@@ -49,7 +49,6 @@ def build_blockchain_json() -> dict:
         Block.timestamp,
     ).order_by(Block.timestamp.desc()).first()
     result_dic['transaction_pool'] = get_transaction_list(last_block)
-    print('hello')
     return result_dic
 
 def get_transaction_list(block: Block) -> list:

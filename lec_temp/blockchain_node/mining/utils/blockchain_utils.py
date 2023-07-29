@@ -4,12 +4,14 @@ import hashlib
 
 from mining.blockchain import BlockChain
 from mining.models import Block, Transaction
+from mining import config
 
 def sorted_dict_by_key(unsorted_dic: dict):
-    return collections.OrderedDict(
-        sorted(unsorted_dic.items()), key=lambda keys: keys[0]
-    )
-    
+    # return collections.OrderedDict(
+    #     sorted(unsorted_dic.items()), key=lambda keys: keys[0]
+    # )
+    # return sorted(unsorted_dic.items())
+    return dict(sorted(unsorted_dic.items()))
     
 def get_blockchain():
     '''데이터베이스로부터 블록체인 정보 가져오기'''
@@ -73,3 +75,44 @@ def get_transaction_list(block: Block) -> list:
 def hash(block: dict) -> str:
     sorted_block = json.dumps(block, sort_keys=True)
     return hashlib.sha256(sorted_block.encode()).hexdigest()
+
+
+def calculate_total_amount(blockchain_addr: str) -> float:
+    '''blockchain_addr에 해당하는 계좌 총액(float) 구하기'''
+    total_amount = 0.0
+    chain = get_blockchain()
+    for block in chain['chain']:
+        # 체인으로 연결된 모든 블록 조사
+        for transaction in block['transactions']:
+            value = float(transaction['amount'])
+            if blockchain_addr == transaction['recv_blockchain_addr']:
+                total_amount += value
+            if blockchain_addr == transaction['send_blockchain_addr']:
+                total_amount -= value
+    
+    return total_amount
+
+
+def get_prev_hash() -> str:
+    '''DB에서 마지막 블록의 prev_hash 리턴'''
+    prev_hash = Block.query.filter(
+        Block.timestamp,
+    ).order_by(Block.timestamp.desc()).first().prev_hash
+    return prev_hash
+
+
+def valid_proof(
+    transactions: list,
+    prev_hash: str,
+    nonce: int
+) -> bool:
+    '''Difficult 개수만큼 0 일치하는지 검사하여 True/False 리턴'''
+    guess_block = sorted_dict_by_key(
+        {
+            'transactions': transactions,
+            'nonce': nonce,
+            'prev_hash': prev_hash,
+        }
+    )
+    guess_hash = hash(guess_block)
+    return guess_hash[:config.MINING_DIFFICULTY] == '0' * config.MINING_DIFFICULTY

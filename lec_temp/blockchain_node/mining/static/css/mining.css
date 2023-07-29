@@ -1,0 +1,7 @@
+/* https://www.w3schools.in/html/blink-tag */
+.blink {
+    font-size: 20px;
+    font-weight: bold;
+    color: #be2d2f;
+    transition: 0.5s;
+}

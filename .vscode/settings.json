@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./lec_07_mining/blockchain_node"
+    ]
+}
