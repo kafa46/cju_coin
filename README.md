@@ -49,7 +49,7 @@
 |35|07-03. (실습) 채굴 백엔드 구현 (mining, utils, transfer)|[click](https://youtu.be/iETzYmMfzT4)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 |36|07-04. (실습) main_views 구현, 채굴 실행, 채굴 난이도 조정 실습|[click](https://youtu.be/4VRYrj7lcdM)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 |37|07-05. (실습) 채굴자 화면 구성 1_기본단추, 입력 만들기|[click](https://youtu.be/eOPy2fDJBgQ)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|37|07-06. (실습) 채굴자 화면 구성 2_안내 텍스트 및 특수효과 추가|[click](https://youtu.be/AcrpGormM2k)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|37|07-06. (실습) 채굴자 화면 구성 2_안내 텍스트 및 특수효과 추가|[click](https://youtu.be/OSPOXqKqu3c)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 
 
 

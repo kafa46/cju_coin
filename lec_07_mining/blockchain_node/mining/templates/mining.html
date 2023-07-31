@@ -2,7 +2,10 @@
 
 {% block content %}
 
+    <!-- 글자색 설정 CSS -->
     <link rel="stylesheet" href="/static/css/mining.css">
+
+    <!-- 글자 깜빡이기 JavaScript -->
     <script src="/static/js/mining.js"></script>
 
     {% with messages = get_flashed_messages() %}
@@ -29,7 +32,7 @@
                     aria-label="Default" 
                     aria-describedby="inputGroup-sizing-default"
                     id="blockchain_addr_input" 
-                    value="{{ form.my_blockchain_addr.data or '' }}">
+                    value="">
               </div>
         </div>
     </div>

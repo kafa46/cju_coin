@@ -11,18 +11,15 @@ from mining.utils.blockchain_utils import (
 from mining.transfer import Transfer
 from mining import config
 from mining.mining import Mine
-from mining.forms import MinigForm
 
 bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
 def home():
     '''Mining 메인화면'''
-    form = MinigForm()
     return render_template(
         # 'index.html'
         'mining.html',
-        form=MinigForm
     )
 
 @bp.route('/get_chain/', methods=['GET'])

@@ -11,18 +11,15 @@ from mining.utils.blockchain_utils import (
 from mining.transfer import Transfer
 from mining.mining import Mine
 from mining import config
-from mining.forms import MiningForm
 
 bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
 def home():
     '''Mining 메인화면'''
-    form = MiningForm()
     return render_template(
         # 'index.html'
         'mining.html',
-        form=form
     )
 
 @bp.route('/get_chain/', methods=['GET'])
@@ -70,6 +67,7 @@ def coin_amount():
     '''코인 갯수를 계산하여 json 리턴'''
     json_data = request.json
     blockchain_addr = json_data['blockchain_addr']
+    print(blockchain_addr)
     if not blockchain_addr:
         return jsonify({
             'status': 'fail',
