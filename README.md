@@ -44,12 +44,19 @@
 |30|06-12. (실습) Blockchain 서버에 코인수량 확인 기능 만들기|[click](https://youtu.be/18409GAZUJ4)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |31|06-13. (실습) Wallet 서버에 코인 업데이트 기능 구현|[click](https://youtu.be/D6Ypmo5DPmc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
 |32|06-14. (실습) Wallet 서버에 코인 수량 자동 업데이트 적용|[click](https://youtu.be/-0dbA41e-sc)|[확인](./lec_06_transaction/lecture_slides/꼰대강의_블록체인_06-02_(실습)%20블록체인%20코인%20이체(transaction).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_06_transaction)|
-|33|07-01. (이론) 블록체인 채굴(mining) 필요성 및 관련 핵심기술|[click](https://youtu.be/9xxTaiP3OC8)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|34|07-02. (실습) 채굴 실습 브리핑, 디렉토리 생성, 일부 유틸리티 수정|[click](https://youtu.be/au8x9bpQ0Ps)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|35|07-03. (실습) 채굴 백엔드 구현 (mining, utils, transfer)|[click](https://youtu.be/iETzYmMfzT4)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|36|07-04. (실습) main_views 구현, 채굴 실행, 채굴 난이도 조정 실습|[click](https://youtu.be/4VRYrj7lcdM)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|37|07-05. (실습) 채굴자 화면 구성 1_기본단추, 입력 만들기|[click](https://youtu.be/eOPy2fDJBgQ)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-|37|07-06. (실습) 채굴자 화면 구성 2_안내 텍스트 및 특수효과 추가|[click](https://youtu.be/OSPOXqKqu3c)|작업중|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|33|07-01. (이론) 블록체인 채굴(mining) 필요성 및 관련 핵심기술|[click](https://youtu.be/9xxTaiP3OC8)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|34|07-02. (실습) 채굴 실습 브리핑, 디렉토리 생성, 일부 유틸리티 수정|[click](https://youtu.be/au8x9bpQ0Ps)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|35|07-03. (실습) 채굴 백엔드 구현 (mining, utils, transfer)|[click](https://youtu.be/iETzYmMfzT4)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|36|07-04. (실습) main_views 구현, 채굴 실행, 채굴 난이도 조정 실습|[click](https://youtu.be/4VRYrj7lcdM)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|37|07-05. (실습) 채굴자 화면 구성 1_기본단추, 입력 만들기|[click](https://youtu.be/eOPy2fDJBgQ)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|37|07-06. (실습) 채굴자 화면 구성 2_안내 텍스트 및 특수효과 추가|[click](https://youtu.be/OSPOXqKqu3c)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|38|07-07. (실습) 채굴자 화면에 본인 코인 현황 조회 기능 추가|[click](https://youtu.be/4XfoMf9gzQ4)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|39|07-08. (실습) 채굴 시작 버튼을 클릭했을 때 처리할 내용 구현|[click](https://youtu.be/pxOcziG4IkE)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|40|07-09. (실습) 1회 채굴 실행 후 결괏값 확인하기|[click](https://youtu.be/XsaHBTJXY0Q)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|41|07-10. (실습) 연속 채굴 기능 구현 및 관련 main views.py 라우팅 추가|[click](https://youtu.be/LkECvFOSJKI)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|42|07-11. (실습) 연속 채굴 완성 및 실제 채굴 수행하면서 보상금 받기 확인|[click](https://youtu.be/-Dny7h5ZWJ8)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|43|07-12. (실습) 채굴 중단 1 - 프런트엔드(자바스크립트, HTML) 코딩|[click](https://youtu.be/pLK12JRNVcU)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
+|44|07-13. (실습)  백엔드 완성 및 실제로 채굴 중단 시키기<br>모든 채굴 기능  완성하고 테스트 해보기|[click](https://youtu.be/Axjzu99VcBw)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 
 
 

@@ -12,6 +12,9 @@ def create_app():
     app.config.from_object(config)
     
     db.init_app(app)
+
+    # Sesseion 초기화
+    app.config["SESSION_TYPE"] = "filesystem"
     
     migrate.init_app(app, db, render_as_batch=True)
     

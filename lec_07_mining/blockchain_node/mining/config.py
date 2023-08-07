@@ -26,3 +26,6 @@ MINING_DIFFICULTY = 5
 
 # Mining Reward
 MINING_REWARD = 15.0
+
+# 채굴 중단 flag
+STOP_MINING = True

@@ -1,3 +1,5 @@
+import threading
+
 from flask import (
     Blueprint,
     jsonify,
@@ -18,7 +20,7 @@ bp = Blueprint('main', __name__, url_prefix='/')
 def home():
     '''Mining 메인화면'''
     return render_template(
-        # 'index.html'
+        # 'index.html',
         'mining.html',
     )
 
@@ -72,8 +74,9 @@ def coin_amount():
             'status': 'fail',
             'content': '지갑주소(blockchain address)가 없습니다.'
         }), 400
+    print(f'coin amount: {calculate_total_amount(blockchain_addr)}')
     return jsonify({
-        'status': 'succcess',
+        'status': 'success',
         'content': calculate_total_amount(blockchain_addr)
     }), 201
         
@@ -111,10 +114,32 @@ def mining_start():
     json_data = request.json
     recv_blockchain_addr = json_data['blockchain_addr']
     mine = Mine()
+    config.STOP_MINING = False
     mine.start_mining(recv_blockchain_addr)
     return jsonify({'status': 'success'}), 200
         
         
+@bp.route('/mining/stop/', methods=['POST'])
+def mining_stop():
+    '''채굴 중단'''
+    json_data = request.json
+    stop_flag = json_data['stop_flag']
+    if stop_flag == 'stop':
+        print('채굴을 중단합니다. 기존 작업을 마무리하는데 시간이 걸립니다.')
+        print('System Flag: config.STOP_MINING -> True')
+        config.STOP_MINING = True
+
+        # 글로벌 변수 config.STOP_MINING 상태를 체크하는 함수
+        def check_stop_mining():
+            while config.STOP_MINING is True:
+                pass
         
+        check_mining_stop_thread = threading.Thread(target=check_stop_mining)
+        check_mining_stop_thread.daemon = True
+        check_mining_stop_thread.start()
+
+        return jsonify({'status': 'stopped'}), 200
+
+    return jsonify({'status': 'fail to stop'})
         
         

@@ -9,7 +9,7 @@ class Block(db.Model):
     
 class Transaction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    block_id = db.Column(db.Integer, db.ForeignKey('block.id'))
+    block_id = db.Column(db.Integer, db.ForeignKey('block.id', ondelete="CASCADE"))
     send_addr = db.Column(db.String(300))
     recv_addr = db.Column(db.String(300))
     amount = db.Column(db.Float)
