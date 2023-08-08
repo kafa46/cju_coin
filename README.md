@@ -58,6 +58,8 @@
 |43|07-12. (실습) 채굴 중단 1 - 프런트엔드(자바스크립트, HTML) 코딩|[click](https://youtu.be/pLK12JRNVcU)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 |44|07-13. (실습) 백엔드 완성 및 실제로 채굴 중단 시키기<br>모든 채굴 기능  완성하고 테스트 해보기|[click](https://youtu.be/Axjzu99VcBw)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-02_(실습)%20블록체인%20채굴(mining).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
 |45|07-14. (실습) 코인 이체 제약사항 걸기<br>(잔액보다 큰 금액 이체 금지)|[click](https://youtu.be/IGI8zUWp8mg)|[확인](./lec_07_mining/lecture_slides/꼰대강의_블록체인_07-03_(실습)%20코인%20이체%20제약사항%20걸기(잔액보다%20큰%20금액%20이체%20금지).pdf)|[이동](https://github.com/kafa46/cju_coin/tree/master/lec_07_mining)|
-
+|46|08-01. (핵심이론) 합의 알고리즘, 비잔틴 내결함성,<br>블록체인 네트워크 내결함성, 51% 공격|[click](https://youtu.be/bav1mRJT0Yw)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
+|47|08-02. (핵심이론) P2P 네트워크, Seed Node 개념, 실습 브리핑|[click](https://youtu.be/88qZid9H9oA)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
+|48|08-03. (참고이론) Public vs Private IP address, P2P 구현 방안|[click](https://youtu.be/eF0Sik9e0eA)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
 
 
