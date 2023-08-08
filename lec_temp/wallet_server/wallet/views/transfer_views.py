@@ -53,6 +53,20 @@ def transfer():
         
         # 처리 -> Todo
         # 잔액 확인 수행
+        # 이체할 금액이 잔액보다 크다면 이체 중지
+        blockchain_seed_node = f'http://{SEED_NODE_IP}:{PORT_MINING}/coin_amount/'
+        json_data = {'blockchain_addr': send_blockchain_addr}
+        response = requests.post(blockchain_seed_node, json=json_data)
+        data = response.json()
+        current_amount = float(data['content'])
+        print(f'trans amount: {amount}')
+        print(f'current amount: {current_amount}')
+        
+        if float(amount) > current_amount:
+            return jsonify({
+                'status': 'fail',
+                'amount': 'not_enough',
+            }), 201
         
         # Singnature 생성
         signature = Wallet.generate_signature(
@@ -61,6 +75,7 @@ def transfer():
             send_private_key=send_private_key,
             amount=float(amount),
         )
+        
         # 보낼 정보 만들어서 blockchain node에게 전송
         json_data = {
             'send_public_key': send_public_key,
@@ -69,6 +84,7 @@ def transfer():
             'amount': float(amount),
             'signature': signature,
         }
+        
         headers = {
             'X-CSRFToken': generate_csrf()
         }

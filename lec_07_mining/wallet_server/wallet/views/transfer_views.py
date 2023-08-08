@@ -51,8 +51,19 @@ def transfer():
                 'reason': '받는사람 지갑 주소가 없습니다..'
             })
         
-        # 처리 -> Todo
-        # 잔액 확인 수행
+        # 이체할 금액이 잔액보다 크다면 이체 중지
+        blockchain_seed_node = f'http://{SEED_NODE_IP}:{PORT_MINING}/coin_amount'
+        json_data = {'blockchain_addr': send_blockchain_addr}
+        response = requests.post(blockchain_seed_node, json=json_data)
+        data = response.json()
+        current_amout = float(data['content'])
+        print(f'tran amount: {amount}')
+        print(f'current amount: {current_amout}')
+        if float(amount) > current_amout:
+            return jsonify({
+                'status': 'fail',
+                'amount': 'not_enough'
+            })
         
         # Singnature 생성
         signature = Wallet.generate_signature(
