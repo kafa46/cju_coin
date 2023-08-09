@@ -30,3 +30,21 @@ MINING_REWARD = 15.0
 # 채굴 중단 flag
 STOP_MINING = True
 
+# 자신의 공인 아이피를 확인하기 위해 이용하는 서비스 프로바이더
+# Other possible service providers
+#   - https://ident.me
+#   - https://api.ipify.org
+#   - https://myip.dnsomatic.com
+IP_CHECK_SERVICE_PROVIDER = 'https://checkip.amazonaws.com'
+
+# My Host Information
+MY_PUBLIC_IP = requests.get(IP_CHECK_SERVICE_PROVIDER).text.strip()
+
+# Seed Node IP addr
+SEED_NODE_IP = '203.252.240.43'
+
+# P2P Network Port Number
+PORT_P2P = '22901'
+
+# Mining node Port #
+PORT_MINING = '7001'

@@ -1,16 +1,19 @@
 import threading
+import requests
 
 from typing import List, Tuple
 from mining.utils import blockchain_utils
 from mining.transfer import Transfer
-from mining.config import (
+from .config import (
     BLOCKCHAIN_NETWORK,
     MINING_DIFFICULTY,
     MINING_REWARD,
+    MY_PUBLIC_IP,
 )
 from mining.blockchain import BlockChain
 from mining import config
 from mining import create_app
+
 
 class Mine:
     '''블록체인 채굴(mining) 클래스'''
@@ -56,7 +59,43 @@ class Mine:
             )
             print('채굴 성공!')
             
+            # 채굴에 성공하면 P2P 이웃 노드에게 정보 업데이트 요청
+            url = f'http://{config.MY_PUBLIC_IP}:{config.PORT_P2P}/neighbors'
+            resp = requests.get(url)
+            neighbors_dic = resp.json()
+            for neighbor in neighbors_dic.values():
+                json_data = {
+                    'ip': config.MY_PUBLIC_IP,
+                    'port': config.PORT_P2P
+                }
+                try:
+                    url_update = f"http://{neighbor['ip']}:{config.PORT_P2P}/update/"
+                    resp = requests.get(url_update, params=json_data, timeout=2)
+                    if resp.status_code != 200:
+                        print(f'Sync neighbor fail on {url_update}')
+                except:
+                    print(f'Sync process failed')
+            
+            # 이웃 노드에게 consensus algorithm (resolve_conflicts)
+            # 실행하도록 요청
+            url_resolve_conflict = f"http://{config.MY_PUBLIC_IP}:{config.PORT_P2P}/neighbors"
+            resp = requests.get(url_resolve_conflict)
+            neighbors_dic = resp.json()
+            for neighbor in neighbors_dic.values():
+                ip, port = neighbor['ip'], neighbor['port']
+                if ip==config.MY_PUBLIC_IP and port==config.PORT_P2P:
+                    continue
+                neighbor_url = f'http://{ip}:{config.PORT_MINING}/resolve_conflict'
+                try:
+                    resp_resolve = requests.get(neighbor_url)
+                    if resp_resolve.status_code == 200:
+                        print('Success resolve conflict')
+                except:
+                    print(f'Cannot connect to {neighbor_url}')
+                    return (False, 'fail')
+            
             return (True, 'success')
+
 
     def start_mining(self, recv_blockcain_addr: str) -> None:
         '''연속적으로 채굴(마이닝) 수행'''

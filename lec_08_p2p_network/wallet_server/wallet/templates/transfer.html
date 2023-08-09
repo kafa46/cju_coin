@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <script src="/static/js/transfer.js"></script>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script type="text/javascript">
+        alert("{{ messages[-1] }}")
+    </script>
+    {% endif %}
+    {% endwith %}
+
+    {% if g.user %}
+        <div class="row my-3">
+            <div class="col-sm">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">
+                            내 코인 수량
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" id="current_coin_amount"
+                        readonly
+                        value=""
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="row my-3" id="form-area" >
+            <div class="shadow px-3 py-1 mb-2 bg-white rounded">코인 이체하기</div>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <form method="post" id="transfer-form">
+                    <!-- Form 오류 표시 -->
+                    {% if form.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for field, errors in form.errors.items() %}
+                        <strong>{{ form[field].label }}</strong>
+                        <ul>
+                            {% for error in errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+        
+                    {{ form.csrf_token }}
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">
+                                이체 수량
+                            </span>
+                        </div>
+                        <input type="number" class="form-control" id="amount"
+                            name="amount"
+                            min="0.000000001"
+                            step="0.000000001"
+                            autocomplete="off"
+                            value="{{ form.amount.data or '' }}"
+                            placeholder="최소 0 초과 코인 수량을 입력하세요 (소수점 9자리까지 가능)">
+                    </div>
+                    <div class="my-5">
+                        <label for="private_key" class="form-label">
+                            본인의 비밀키(private_key)를 입력해 주세요
+                        </label>
+                        <input type="password" class="form-control"
+                            id="private_key"
+                            name="private_key"
+                            autocomplete="off"
+                            value="{{ form.private_key.data or '' }}">
+                    </div>
+                    <div class="my-5">
+                        <label for="public_key" class="form-label">
+                            본인의 공개키(public_key)를 입력해 주세요
+                        </label>
+                        <input type="text" class="form-control"
+                            id="public_key"
+                            name="public_key"
+                            autocomplete="off"
+                            value="{{ form.public_key.data or '' }}">
+                    </div>
+                    <div class="my-5">
+                        <label for="recv_addr" class="form-label">
+                            받을사람 지갑 주소를 입력해 주세요
+                        </label>
+                        <input type="text" class="form-control"
+                            id="recv_addr"
+                            name="recv_addr"
+                            autocomplete="off"
+                            value="{{ form.recv_addr.data or '' }}">
+                    </div>
+                    <div class="my-5" hidden>
+                        <input type="text" class="form-control"
+                            id="send_addr"
+                            name="send_addr"
+                            autocomplete="off"
+                            value="{{ g.user.blockchain_addr }}">
+                    </div>
+                    <button class="btn btn-outline-primary" id="submit-btn">이체</button>
+                    <a href="{{ url_for('main.home') }}" class="btn btn-outline-primary">취소</a>
+                </form>    
+            </div>
+        </div>
+        <div class="row my-3" id="after-transfer" hidden>
+            <div class="row my-3">
+                <h3 id="success-msg">메롱</h3>
+            </div>
+            <div class="col-sm">
+                <a href="{{ url_for('transfer.transfer') }}" class="btn btn-outline-primary">추가이체</a>
+                <a href="{{ url_for('wallet.my_wallet') }}" class="btn btn-outline-primary">내 지갑으로 이동</a>
+            </div>
+
+        </div>
+    {% else %}
+        시스템을 이용하기 위해서는 로그인이 필요합니다.
+    {% endif %}
+
+{% endblock %}

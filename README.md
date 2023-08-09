@@ -61,5 +61,7 @@
 |46|08-01. (핵심이론) 합의 알고리즘, 비잔틴 내결함성,<br>블록체인 네트워크 내결함성, 51% 공격|[click](https://youtu.be/bav1mRJT0Yw)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
 |47|08-02. (핵심이론) P2P 네트워크, Seed Node 개념, 실습 브리핑|[click](https://youtu.be/88qZid9H9oA)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
 |48|08-03. (참고이론) Public vs Private IP address, P2P 구현 방안|[click](https://youtu.be/eF0Sik9e0eA)|[확인](./lec_08_p2p_network/lecture_slides/꼰대강의_블록체인_08-01_(이론)%20블록체인%20P2P%20구현%20및%20Consensus%20알고리즘.pdf)|없음|
+|49|08-04. (실습) P2P 서버 뼈대 만들기|[click](https://youtu.be/6vBvvSiSyyc)|작업중|작업중|
+|50|08-05. (실습) DB생성, 서버작동 확인, 콘트롤러 기본기능 설계|[click](https://youtu.be/N9aL_r0ZjTI)|작업중|작업중|
 
 
